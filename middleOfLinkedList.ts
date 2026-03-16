@@ -7,7 +7,31 @@ class ListNode {
     this.next = next === undefined ? null : next;
   }
 }
+/* Length বের করো:
 
+* একটা variable length = 0 initialize করো।
+* current = head set করো।
+* while loop চালাও যতক্ষণ current null না হয়:
+  ^ length++ করো।
+  ^ current = current.next করো।
+* এতে list এর total nodes count হয়ে যায়।
+* Middle Index Calculate করো:
+
+  ^ middleIndex = Math.floor(length / 2)।
+~যেমন: length 5 হলে middleIndex = 2 (0-based index)।
+~length 4 হলে middleIndex = 2 (second middle)।
+* Middle Node Traverse করো:
+
+* current = head reset করো।
+* for loop চালাও i = 0 থেকে i < middleIndex পর্যন্ত:
+* current = current!.next করো।
+^ এতে middle position এ পৌঁছে যাবে।
+*Return করো:
+
+return current; (middle node)।
+
+
+*/
 function middleNode(head: ListNode | null): ListNode | null {
   let length = 0;
   let current = head;
